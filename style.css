@@ -1,0 +1,481 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.head-nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 8vh;
+    overflow: hidden;
+    z-index: 9;
+    box-shadow: 3px 9px 74px -22px rgba(0,255,255,0.47);
+    -webkit-box-shadow: 3px 9px 74px -22px rgba(0,255,255,0.47);
+    -moz-box-shadow: 3px 9px 74px -22px rgba(0,255,255,0.47);
+}
+
+.fixed {
+    background-color: white;
+ 
+}
+
+
+/* logo pic  */
+
+
+.logo{
+    color: black;
+    font-size: 2.3em;
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px; 
+    
+    font-weight: 400;
+    cursor: pointer;
+    flex-basis: 40%;
+}
+
+.h1-span {
+    font-family: 'Bebas Neue';
+    /* font-size: 2em; */
+    padding: 5px;
+    color: rgb(255, 174, 0);
+}
+
+/* nav links */
+
+
+.nav-ui {
+    display:flex;
+    max-width: 70%;
+    z-index: 9;
+}
+
+#fa-1 {
+    color:white;
+    position: inherit;
+    display: none;
+}
+
+#fa-2 {
+    display: none;
+}
+
+.nav-li {
+    list-style: none;
+    padding: 1em;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    display: block;
+   
+}
+
+
+/* drop box head/ */
+/* 
+.drop-box {
+    display: none;
+    position: fixed;
+    background-color: rgb(255, 162, 0);
+    margin: 13px;
+    box-shadow: 6px 9px 64px -20px rgba(0,255,255,0.75);
+-webkit-box-shadow: 6px 9px 64px -20px rgba(0,255,255,0.75);
+-moz-box-shadow: 6px 9px 64px -20px rgba(0,255,255,0.75);
+overflow: hidden;
+}
+
+.drop-a {
+    display: block;
+    padding: 15px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.drop-a:hover {
+    background-color: rgba(250, 125, 0, 0.527);
+    transform: scale(1.02);
+
+} 
+
+#drop-hover:hover .drop-box {
+    display: block;
+} */
+
+.nav-li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+.nav-li:hover a {
+        color: orange;
+        transform: scale(1.03);
+}
+
+@media (max-width : 910px) {
+    .logo {
+        flex-basis:30%;
+    }
+}
+
+@media (max-width : 800px) {
+    .login-box {
+        width: 80%;
+        
+    }
+
+
+    .head-nav {
+        overflow: visible;
+    }
+    .nav-ui {
+        position: absolute;
+        top: -20px;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 23px;
+        z-index: 11;
+        background-color: rgb(255, 174, 0);
+        text-align: left;
+        transition: 1s;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+}
+    #fa-2  {
+        display: block;
+        position: absolute;
+        color: black;
+        font-size: 25px;
+        padding: 18px;
+        right: 5px;
+     
+}
+    #fa-1  {
+        color:black;
+        font-size: 25px;
+        display: block;
+        padding: 0;
+        margin: auto;
+        margin-left : 15px;
+    }
+
+    .main-content {
+        position: absolute;
+        z-index : 0;
+        width: 80%;
+    }
+
+    .logo{
+        font-size: 30px;
+        flex-basis: 70%;
+    }
+    .main-content h1 {
+        font-size: 25px;
+    }
+    .main-content p {
+        font-size: 14px;
+    }
+    .main-btn {
+        font-size: 15px;
+    }
+    .drop-box {
+        position: relative;
+        margin-top: 35px;
+        background-color: transparent;
+    }
+    .nav.li {
+       margin-top: 15px;
+       transition: 0;
+       -webkit-transition: 0;
+       -moz-transition: 0;
+       -ms-transition: 0;
+       -o-transition: 0;
+    }
+   
+    .drop-a:hover {
+        background-color: transparent;
+    }
+    .drop-a {
+        text-decoration: solid;
+        background-color: none;
+        
+    }
+}
+
+
+/* main container */
+
+.background {
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+}
+
+.content {
+    flex-basis: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content :center;
+}
+.content h1 {
+    font-size: 40px;
+}
+.content p {
+    font-size: 1em;
+}
+
+.main-cont {
+    flex-basis: 60%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.main-cont img {
+    width: 90%;
+}
+
+@media (max-width : 700px) {
+    .background {
+        flex-direction: column;
+        top: 15%;
+        height: 80vh;
+    }
+    .content {
+        width: 85%;
+        margin: auto;
+        margin-top: 10%;
+        flex-basis: 50%;
+    }
+    .content h1 {
+        font-size: 30px;
+    }
+    .main-cont {
+        flex-basis: 50%;
+    }
+
+}
+
+
+/* about use */
+
+
+.about {
+    width: 100%;
+    padding-bottom: 40px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(240, 237, 237, 0.588);
+}
+
+.about h1 {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+
+
+
+
+.abt-card {
+    background-color: white;
+    padding: 18px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin: auto;
+    width: 80%;
+    -webkit-box-shadow: -1px 21px 67px -38px rgba(0,0,0,0.24);
+    -moz-box-shadow: -1px 21px 67px -38px rgba(0,0,0,0.24);
+    box-shadow: -1px 21px 67px -38px rgba(0,0,0,0.24);
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.abt-card:hover{
+    -webkit-box-shadow: -1px 21px 67px -38px rgba(0,0,0,0.31);
+    -moz-box-shadow: -1px 21px 67px -38px rgba(0,0,0,0.31);
+    box-shadow: -1px 21px 67px -38px rgba(0,0,0,0.31);
+    transform:  translateY(3px);
+    -webkit-transform:  translateY(3px);
+    -moz-transform:  translateY(3px);
+    -ms-transform:  translateY(3px);
+    -o-transform:  translateY(3px);
+}
+
+
+.img-abt {
+    flex-basis: 30%;
+    overflow: hidden;
+
+}
+.card-img {
+    width: 100%;
+    margin : auto;
+}
+.card-mat {
+   flex-basis: 70%;
+
+}
+.card-mat h3 {
+    padding: 10px;
+    font-size: 1.8em;
+}
+.card-mat p {
+    font-size : 1em;
+    padding : 10px;
+    padding-top: 0;
+}
+
+#reverse-card {
+    flex-flow: row-reverse;
+}
+
+@media (max-width: 1000px) {
+    .card-mat h3 {
+        font-size: 1.6em;
+        font-weight: 500;
+        padding: 5px;
+    }
+    .card-mat p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width : 735px) {
+    .abt-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-abt{
+        width: 40%;
+        align-items: center;
+        display: flex;
+    }
+    #reverse-card {
+        flex-flow: column;
+    }
+    .card-mat {
+        text-align: center;
+    }
+   
+}
+
+/* refer and earm */
+
+.refer {
+    width: 100wh;
+    height: 100vh;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.refer-card {
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+.refer-img {
+    flex-basis: 60%;
+    width: 100%;
+}
+
+.refer-img img {
+    width: 100%;
+}
+
+.refer-content {
+    padding: 8px;
+    flex-basis: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.refer-content h2 {
+        color: orange;
+}
+
+.input-cont {
+    width: 100%;
+}
+.input-cont  input {
+    display: block;
+    width: 100%;
+    padding : 5px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid orange;
+    outline: none;
+}
+
+.country {
+    border: none;
+    border-bottom: 2px solid orange;
+    color: orange;
+    padding: 8px;
+    margin: 10px;
+    outline: none;
+}
+
+.login-box {
+    width: 50wh;
+    height: 80vh;
+    text-align: center;
+    margin : auto;
+}
+
+.login-box h1 {
+    font-size: 40px;
+    padding: 15px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.login-box form input {
+    border: none;
+    border-bottom: 2px solid orange;
+    outline: none;
+    margin: 10px;
+    text-align: center;
+}
+
+
+
+
